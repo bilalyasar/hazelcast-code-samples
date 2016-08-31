@@ -17,6 +17,7 @@
         <!-- needed for checkstyle/findbugs -->
         <main.basedir>${project.parent.parent.basedir}</main.basedir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <hsqldb.version>2.2.9</hsqldb.version>
     </properties>
 
     <dependencies>
@@ -26,14 +27,21 @@
             <version>${hazelcast.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>${hsqldb.version}</version>
+            <type>jar</type>
+            <!--<scope>test</scope>-->
+        </dependency>
+        <dependency>
             <groupId>com.hazelcast</groupId>
-            <artifactId>hazelcast-hibernate4</artifactId>
+            <artifactId>hazelcast-hibernate3</artifactId>
             <version>${hazelcast.version}</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>4.3.8.Final</version>
+            <version>3.6.10.Final</version>
         </dependency>
         <dependency>
             <groupId>javassist</groupId>

@@ -72,9 +72,6 @@ public class EnterpriseMapWanReplicationClusterA {
     }
 
     private static void initClusters() {
-        Config config = new Config();
-        config.setLicenseKey(ENTERPRISE_LICENSE_KEY);
-
-        clusterA = Hazelcast.newHazelcastInstance(config);
+        clusterA = Hazelcast.newHazelcastInstance();
     }
 }
